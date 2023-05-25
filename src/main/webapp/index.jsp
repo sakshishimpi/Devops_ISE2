@@ -1,560 +1,223 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href='./css/main.css' />
-        <link rel="shortcut icon" href="img\logo\Garcia Tavern-logos.jpeg" />
-        <script src="./js/anime.min.js"></script>    
-        <script src="js/intro.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-        <title>Gacias Tavern </title>
-    </head>
-    <body>
-        <style>
-            *  color varibles for the page */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Photography project</title>
+</head>
 
-/*------------------------------------------------------------------
-    style template for mexican resturant 
-    
-    author: cryptograghi 
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-*/
-root {
-
-    --font: slategrey;
-    --background: wheat;
-    --menuColor: slategrey;
+html {
+    scroll-behavior: smooth;
 }
-
-
 
 body {
-    width: auto;
-    background-image: url('https://images.unsplash.com/photo-1606625736768-f521ab7e23fb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jeswin-thomas-PtfRiBumfQU-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    background-color: wheat;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-/* nav bar styling */
-
-.navBar {
-    margin-bottom: 20px;
-    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #eee;
     height: auto;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: inline-block;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.541);
 }
 
-.navBar a {
-    text-decoration: none;
-    color: white;
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0;
 }
 
 img {
-    margin: 10px;
+    display: block;
+    width: 100%;
 }
 
-i {
-    font-size: 20px;
+main {
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1)
 }
 
-i:hover,
-a:hover {
-    color: dodgerblue;
-    cursor: pointer;
+#landing {
+    background: #fff;
 }
 
-.navBar nav li {
-    padding: 10px;
-    margin: 20px;
-    list-style-type: none;
+#landing-text {
+    display: flex;
+    flex: 0 1 40vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+#landing-text h2 {
+    color: #888;
+}
+
+#landing-image {
+    background: url(https://source.unsplash.com/De8wMYoSSBc);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    border: 1px solid #ccc;
     display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    transition: background 500ms ease;
 }
 
-
-#hamMenu {
-    visibility: hidden;
+.btn:hover {
+    background: #f4f4f4;
 }
 
-/*  grid system for the webpage */
-
-.header {
-    width: 80%;
-    height: auto;
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    display: grid;
-    grid-template-rows: 1fr;
-}
-
-.header>div {
-    margin-top: 10%;
-    max-width: 100%;
-
-}
-
-.IntroMsg {
-    margin: 20px;
-    position: relative;
-    width: 100%;
-    left: 5%;
-    top: -20%;
+#header {
+    padding: 1.5rem;
     text-align: center;
-    padding: 10px;
-    height: auto;
-    opacity: 0.9;
-    background-color: transparent;
-    border-radius: 10px;
-
+    background: #333;
+    color: #fff;
 }
 
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+#header h2 {
+    border-left: 1px dotted #fff;
+    border-right: 1px dotted #fff;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
-/* for image seperation */
-
-
-.story {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.caption {
+    padding: 0.8rem;
     text-align: center;
 }
 
-.imgContainer {
-    width: 90%;
-    height: fit-content;
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    color: white;
-
-
-}
-
-.imgContainer>div {
-    margin: 10px;
-}
-
-.menuIntro>img {
-    width: 75%;
-    border-radius: 10%;
-    height: auto;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    filter: blur(0.5px);
-}
-
-.menuIntro {
+footer {
     text-align: center;
-    color: rgb(39, 39, 39);
-    border-radius: 10px;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333;
 }
 
-.menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    width: 100%;
-    left: 0%;
-    text-align: center;
-    padding: 20px;
-    opacity: 0.9;
-    background-color: rgba(100, 98, 98, 0.288);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+footer h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
 }
 
-@media only screen and (max-width: 600px) {
+footer p a {
+    text-decoration: none;
+    color: red;
+}
 
-    .menu,
-    .form {
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-        position: relative;
-        top: -5%;
+/*Screen Sizes 500px +*/
 
-    }
-
-    .logo {
-        width: 200px;
-        height: 200px;
-    }
-
-    html {
-        font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    h2,
-    h1 {
-        font-size: 18px;
-    }
-
-    .navBar,
-    .navBar nav li {
-        width: 100%;
+@media(min-width: 31.25rem) {
+    #landing {
+        display: flex;
         height: 100%;
-        display: block;
-    }  
-
-    #hamMenu {
-        visibility: visible;
-        color: white;
-        font-size: 25px;    
-        z-index: -1;
     }
 
-}
-
-
-.form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    width: 100%;
-    left: 0%;
-    top: 40px;
-    text-align: center;
-    padding: 20px;
-    opacity: 0.9;
-    background-color: rgba(100, 98, 98, 0.288);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-
-.form input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 80%;
-    opacity: 0.9;
-    margin: 10px;
-
-}
-
-.form span {
-    margin: 10px;
-}
-
-.form button {
-    width: 60%;
-    position: relative;
-    left: 2%;
-    margin: 5px;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    text-shadow: 0.5px 0.5px black;
-    background-color: rgb(109, 103, 93);
-    padding: 10px;
-}
-
-.form button:hover {
-    cursor: pointer;
-    box-shadow: 0px 3px 6px slategray;
-}
-
-.form button:active {
-    background-color: rgba(30, 96, 161, 0.801);
-    border: none;
-}
-
-#home-menu ul {
-    background-color: white;
-    border-radius: 5px;
-    list-style: none;
-    padding: 30px;
-}
-
-#home-menu h2 {
-    text-shadow: 0.5px 0.5px black;
-}
-
-#home-menu ul:after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-#home-menu li {
-    float: left;
-    width: 50%;
-    padding: 0;
-    margin: 20px 0 20px 8%;
-    border-bottom: 1px solid slategray;
-}
-.dish {
-    float: left;
-    color: #555;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
-    padding-right: 15px;
-}
-
-.Price {
-    float: right;
-    color: #555;
-    font-weight: bold;
-    position: relative;
-    background-color: transparent;
-    padding-left: 15px;
-}
-
-.Description {
-    clear: both;
-    display: block;
-    color: #999;
-    font-style: italic;
-    font-size: 14px;
-    padding-top: 10px;
-    position: relative;
-    top: -8px;
-}
-
-
-.logo {
-    animation: windowsFly ease-out 3s;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 4px rgb(255, 255, 255), 0.3em 0.3em 4em rgba(0, 0, 0, 0.3);
-}
-
-/*  image animation for resturant*/
-
-@keyframes windowsFly {
-    0% {
-        filter: blur(10px);
-        opacity: 0;
-        width: 0px;
-
+    #landing-text {
+        height: 100vh;
     }
 
-    50% {
-        filter: blur(5px);
-        opacity: 0.5;
-        width: 50%;
-    }
-
-    100% {
-        opacity: 1;
+    #landing-image {
+        height: 100vh;
     }
 }
-        </style>
-    
-        <!--  animated nav bar -->
-         <div class="navBar" id="nv">
-            <nav>
-                <i class="bi bi-justify" onclick="alert('heelo')" id="hamMenu"></i>
-                <ul>
-                    <!-- main nav section -->
-                    <li><a href='?page=home'>HOME </a></li>
-                    <li><a href='?page=menu'>MENU </a></li>
-                    <li><a href='?page=ourstory'>OUR STORY  </a></li>
-                    <li><a href='?page=contactus'>CONTACT US </a></li>
-                    <!-- icons social and phone -->
-                    <li class="socialIcon"><a href="call:111-111-111"><i class="bi bi-telephone-forward"></i></a></li>
-                    <li class="socialIcon"><a href="instgram.com/example"><i class="bi bi-instagram"></i></a></li>
-                    <li class="socialIcon"><a href="mailto:example@example.com"><i class="bi bi-envelope-fill"></i></a></li>
-                </ul>
-            </nav>
-        </div>  
-        
-        <div class="header">
-    
-           
-             
-        <!-- main logo !-->
-        <div class="IntroMsg">
-        <img  alt="Garcia Taverns where food meets passion" 
-        class="logo" src="https://i.ibb.co/WK9hkx8/Garcia-Tavern-logos-transparent.png" id="introLogo" width="200" height="200" />
-        </div>
-            <!-- subject-->
-        <div class='IntroMsg'>
-            <h1> Stunning food, Amazing Quaility  </h1>
-        </br>
-            <span>
-               Let us host your next special occassion
-            </span>
-            <h2>
-           <a href="call:111-111-111" style="text-decoration: none; color: white;"> <i class="bi bi-telephone-forward-fill"> <span> Contact US today </span></i></a>
-           
-            </h2>
-        </div>
-            <!-- review name-->
-    
-            <!-- title system for content-->
-      
-         <div class="menu">   
-            <div class="menuIntro">     
-                <!-- img tile system -->
-                <img src="https://i.ibb.co/QCxY7FT/michael-discenza-Mxfcoxyc-H-Y-unsplash.jpg"/>
-                <img src="https://i.ibb.co/cNrYC6S/izabela-rutkowski-Nme6-Tb-Wu-Vp-A-unsplash.jpg" />
+
+/*Screen Sizes 700px +*/
+
+@media(min-width: 43.75rem) {
+    .btn {
+        padding: 1rem 3rem;
+    }
+}
+    </style>
+    <main>
+        <!--Landing Area-->
+        <div id="landing">
+            <div id="landing-text">
+                <div id="landing-text-inner">
+                    <h1>My Photography Website</h1>
+                    <h2>Beatyful Images</h2>
+                    <a href="#images" class="btn" id="view-work">
+                        View Work
+                    </a>
+                </div>
             </div>
-                
-        <!-- menu layout-->
-            <section id="home-menu">
-                <h2>DRINK MENU</h2>
-                <h3> Sprits, wine, and beer</h3>
-        <ul>
-            <li>
-                <span class="dish">Vodka 1oz</span>
-                <span class="Price">$6</span>
-                <span class="Description">VODKA and choice of juice or soda.</span>
-            </li>
-            <li>
-                <span class="dish">Rum 1oz.</span>
-                <span class="Price">$6</span>
-                <span class="Description">RUM and choice of juice or soda.</span>
-            </li>
-            <li>
-                <span class="dish">Whisky 1oz.</span>
-                <span class="Price">$6</span>
-                <span class="Description">Whisky and choice of juice or soda.</span>
-            </li>
-            <li>
-                <span class="dish">Tequila 1oz.</span>
-                <span class="Price">$6</span>
-                <span class="Description">Tequila served with juice or soda.</span>
-            </li>
-            <li>
-                <span class="dish">Red wine.</span>
-                <span class="Price">$8</span>
-                <span class="Description">8oz Red wine, ask server for our wine selection. </span>
-            </li>
-            <li>
-                <span class="dish">White wine.</span>
-                <span class="Price">$8</span>
-                <span class="Description">8oz white wine, ask server for our wine selection.</span>
-            </li>
-            <li>
-                <span class="dish">Sparkling wine .</span>
-                <span class="Price">$12</span>
-                <span class="Description">8oz sparking wine glass of your choice.</span>
-            </li>
-            <li>
-                <span class="dish">Domestic and foreign beer .</span>
-                <span class="Price">$6 - $8</span>
-                <span class="Description">Domestic and foreign beer of you choice</span>
-            </li>
-        </ul>
-        </section>
-        <!-- end of menu layout -->
+            <div id="landing-image"></div>
         </div>
-    
-        <div class="menu">   
-            <div class="menuIntro">    
-                <img  id="caption_img"src="https://i.ibb.co/9g9yg5G/chad-montano-l-P5-MCM6n-Z5-A-unsplash.jpg"  />  
-                <img id="caption_img" src="https://i.ibb.co/q1HKkyL/ella-olsson-4d-Qia-WKi-L-Y-unsplash.jpg" />
+        <div id="images">
+            <div id="header">
+                <h2>My Work</h2>
             </div>
-     
-         <section id="home-menu">
-                <h2>FOOD MENU</h2>
-                <h3> Entrees, mains, and handhelds</h3>
-        <ul>
-            <li>
-                <span class="dish">Nachos</span>
-                <span class="Price">$12</span>
-                <span class="Description">cheese, onions, tomotoes. 
-                </span>
-            </li>
-            <li>
-                <span class="dish">Tacos.</span>
-                <span class="Price">$12</span>
-                <span class="Description">chicken or beef with your choice of side.</span>
-            </li>
-            <li>
-                <span class="dish">Chicken rice bowl.</span>
-                <span class="Price">$16</span>
-                <span class="Description">
-                    brown rice, and veggies, served with choice or sauce 
-                </span>
-            </li>
-            <li>
-                <span class="dish">Grilled chicken</span>
-                <span class="Price">$15</span>
-                <span class="Description">
-                    Juicy grilled chicken served with choice of sauce.
-                </span>
-            </li>
-            <li>
-                <span class="dish">Steak and fired beans.</span>
-                <span class="Price">$15</span>
-                <span class="Description">Steak and your choice of side.</span>
-            </li>
-            <li>
-                <span class="dish">burrito.</span>
-                <span class="Price">$12</span>
-                <span class="Description">Your choice of beef or chicken.</span>
-            </li>
-            
-        </ul></section></div>
-    
-    
-        <div class="menu">   
-            <div class="menuIntro">    
-                 <img src="https://i.ibb.co/GJ0Q03Q/camille-paralisan-rq-NIBr-DGnh4-unsplash.jpg" />
-                 <img src="https://i.ibb.co/rsxRJMX/oscar-nord-5-CPn8-NE2-Tc-unsplash.jpg" />
+
+            <img src="https://source.unsplash.com/1600x900/?nature,water
+" alt="nature image">
+            <div class="caption">
+                <h3>Photo One</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, error!</p>
             </div>
-         <section id="home-menu">
-                <h2>DESERT MENU</h2>
-                <h3> Deserts and sweets</h3>
-        <ul>
-            <li>
-                <span class="dish">Chocolate cake .</span>
-                <span class="Price">$7</span>
-                <span class="Description">Loaded Chocolate cake with fudge topping.</span>
-            </li>
-            <li>
-                <span class="dish">NY cheesecake.</span>
-                <span class="Price">$12</span>
-                <span class="Description">NY cheesecake toped with strawberry topping.</span>
-            </li>
-            <li>
-                <span class="dish">Apple pie.</span>
-                <span class="Price">$6</span>
-                <span class="Description">Warm apple pie tooped with icecream.</span>
-            </li>
-            <li>
-                <span class="dish">Churros.</span>
-                <span class="Price">$7</span>
-                <span class="Description">pancake mix, water, oil, sugar, cinnamon.</span>
-            </li>
-            <li>
-                <span class="dish">Sopaipillas</span>
-                <span class="Price">$7</span>
-                <span class="Description">Light, crispy pastry puffs, sopaipillas are a sweet way to round out a spicy meal.</span>
-            </li>
-            <li>
-                <span class="dish">Creamy Caramel Flan.</span>
-                <span class="Price">$12</span>
-                <span class="Description">A small slice of this impressively rich, creamy, caramel flan dessert goes a long
-                    way.</span>
-            </li>
-            <li>
-                <span class="dish">Shortcut Tres Leches Cake</span>
-                <span class="Price">$12</span>
-                <span class="Description">My mom's favorite cake is tres leches, a butter cake soaked in three kinds of milk. </span>
-            </li>
-            <li>
-                <span class="dish">Pressure-Cooker Pumpkin Flans</span>
-                <span class="Price">$14</span>
-                <span class="Description">This silky, smooth dessert captures the essence and elegance of fall. </span>
-            </li>
-        </ul></section></div></div>
-    
-    
-       <!-- coded by cryptograghi 2021  aka oliver shwaba  :) -->
+            <img src="https://source.unsplash.com/1600x900/?nature,trees
+            " alt="nature image">
+            <div class="caption">
+                <h3>Photo Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, error!</p>
+            </div>
+            <img src="https://source.unsplash.com/1600x900/?nature,flowers
+            " alt="nature image">
+            <div class="caption">
+                <h3>Photo Three</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, error!</p>
+            </div>
+            <img src="https://source.unsplash.com/1600x900/?nature,animals
+            " alt="nature image">
+            <div class="caption">
+                <h3>Photo Four</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, error!</p>
+            </div>
+            <img src="https://source.unsplash.com/1600x900/?nature,clouds
+            " alt="nature image">
+            <div class="caption">
+                <h3>Photo Five</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, error!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Get In Touch</h3>
+        <p>Email or call us to set up a consult</p>
+        <p>Email: <strong>contact@myphotographyproject.test</strong></p>
+        <p>Phone:
+            <a href="+3595555555">
+                <strong>(+359) 555-5555</strong>
+            </a>
+        </p>
+    </footer>
+
+</body>
+ 
 </html>
-
